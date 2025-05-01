@@ -17,13 +17,13 @@ from datetime import datetime, timedelta
 from typing import Optional, Literal
 
 TOKEN = ''
-RAM_LIMIT = '64g'
-SERVER_LIMIT = 1
+RAM_LIMIT = '32g'
+SERVER_LIMIT = 100
 database_file = 'database.txt'
 PUBLIC_IP = '138.68.79.95'
 
 # Admin user IDs - add your admin user IDs here
-ADMIN_IDS = [1258646055860568094,1330372816926670979,951418376230670336,1295737579840340032]  # Replace with actual admin IDs
+ADMIN_IDS = [1333473140839551149,1330372816926670979,951418376230670336,1295737579840340032]  # Replace with actual admin IDs
 
 intents = discord.Intents.default()
 intents.messages = False
