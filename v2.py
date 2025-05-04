@@ -327,7 +327,7 @@ async def change_status():
         else:
             instance_count = 0
 
-        status = f"with {instance_count} Cloud Instances 🌐"
+        status = f"with {instance_count} vp's"
         await bot.change_presence(activity=discord.Game(name=status))
     except Exception as e:
         print(f"Failed to update status: {e}")
@@ -972,7 +972,7 @@ async def deploy_with_os(interaction, os_type, ram, cpu, user_id, user, containe
         dm_embed.add_field(name="🔥 CPU Cores", value=f"{cpu} cores", inline=True)
         dm_embed.add_field(name="🧊 Container Name", value=container_name, inline=False)
         dm_embed.add_field(name="💾 Storage", value=f"10000 GB (Shared storage)", inline=True)
-        dm_embed.add_field(name="🔒 Password", value="hk-i9", inline=False)
+        dm_embed.add_field(name="🔒 Password", value="Gostvps", inline=False)
         
         dm_embed.set_footer(text="Keep this information safe and private!")
         
@@ -984,7 +984,7 @@ async def deploy_with_os(interaction, os_type, ram, cpu, user_id, user, containe
             
             # Public success message
             success_embed = discord.Embed(
-                title="**✅ Create VPS hk-i10 Successfully**",
+                title="**✅ Create VPS Gostvps Successfully**",
                 description=f"** 🎉 VPS instance has been created for <@{user_id}>. They should check their DMs for connection details.**",
                 color=0x00ff00
             )
