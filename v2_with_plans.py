@@ -1279,21 +1279,64 @@ async def help_command(interaction: discord.Interaction):
     await interaction.response.send_message(embed=embed)
 
 
-@bot.tree.command(name="plans", description="Show the development plans for the VPS deployer bot")
+@bot.tree.command(name="plans", description="Show the available VPS plans and how to redeem them")
 async def plans(interaction: discord.Interaction):
-    plan_items = [
-        "- Add web dashboard for Docker containers",
-        "- Implement auto-expiry for idle containers",
-        "- Add real-time monitoring (RAM/CPU/network)",
-        "- Enable custom Docker images from user input",
-        "- Improve logging and error tracking",
-        "- Add billing or credit-based system"
-    ]
     embed = discord.Embed(
-        title="🛠 VPS Bot Roadmap",
-        description="\n".join(plan_items),
-        color=discord.Color.orange()
+        title="🌟 **Free VPS Plans** 🌟",
+        description="🔥 Ready to grab your **FREE VPS**? Here are the exciting options available:",
+        color=0x00ff00
     )
+    
+    embed.add_field(
+        name="💾 **4GB RAM + 1 Core**",
+        value="- **100K Owo** or **3 Invites**",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="💾 **6GB RAM + 2 Cores**",
+        value="- **250K Owo** or **5 Invites**",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="💾 **7GB RAM + 3 Cores**",
+        value="- **300K Owo** or **7 Invites**",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="💾 **10GB RAM + 3 Cores**",
+        value="- **500K Owo** or **7 Invites**",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="💾 **13GB RAM + 4 Cores**",
+        value="- **700K Owo** or **10 Invites**",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="💾 **16GB RAM + 4 Cores**",
+        value="- **1M Owo** or **15 Invites**",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="📩 **How to Redeem:**",
+        value="- Create a ticket in the support channel.\n"
+              "- Ping support directly in the ticket for a fast response!",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="**Important Notes:**",
+        value="- These VPS plans are **SSH-only**, but they are fully compatible with **Pterodactyl**.\n"
+              "- Don't miss out – act fast! 🚀",
+        inline=False
+    )
+    
     await interaction.response.send_message(embed=embed)
 
 
